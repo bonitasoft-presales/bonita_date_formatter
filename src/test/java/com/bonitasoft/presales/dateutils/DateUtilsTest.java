@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class DateUtilsTest {
     @Test
     void should_format_date(){
+        // tag::date[]
         //given
         Date date = Date.from(getInstant());
 
@@ -21,10 +22,12 @@ class DateUtilsTest {
 
         //then
         assertEquals(format,"06 janvier 1970");
+        // end::date[]
     }
 
     @Test
     void should_format_offsetDateTime(){
+        // tag::offsetDateTime[]
         //given
         ZoneId zoneId = ZoneId.of("Europe/Paris");
         OffsetDateTime offsetDateTime = OffsetDateTime.ofInstant(getInstant(), zoneId);
@@ -34,6 +37,7 @@ class DateUtilsTest {
 
         //then
         assertEquals("06 janvier 1970 01:00:00",format);
+        // end::offsetDateTime[]
     }
 
     private static Instant getInstant() {

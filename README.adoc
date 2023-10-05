@@ -1,0 +1,33 @@
+= Date Formatter
+
+This simple utility jar aims to convert differents kinks of java date to human readable strings
+
+== Usage
+
+[source,java]
+----
+include::src/test/java/com/bonitasoft/presales/dateutils/DateUtilsTest.java[tag=date]
+----
+
+[source,java]
+----
+include::src/test/java/com/bonitasoft/presales/dateutils/DateUtilsTest.java[tag=offsetDateTime]
+----
+
+== Build
+
+use maven command
+
+[source,shell]
+----
+mvn clean install
+----
+
+== Use in studio
+
+set project external dependency using maven coordinates
+
+[source,xml]
+----
+include::pom.xml[tag=mavenDep]
+----
